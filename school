@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("I am a college student\n");
+    printf("I love my school");
+    return 0;
+}
