@@ -3,9 +3,10 @@
 int a=3;
 int b=5;
 int c;
+printf("交换前a=%d,b=%d"，a,b)
 c=a;
 a=b;
 b=c;
-printf("a=%d,b=%d",a,b)
+printf("交换后a=%d,b=%d",a,b)
 return 0
 }
