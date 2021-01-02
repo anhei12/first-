@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main()
+{
+int r;
+printf("请输入半径：\n");
+scanf("%d",&r);
+printf("周长为%.2f",2*3.14*r);
+printf("面积为%.2f",3.14*r*r);
+return 0;
+}
