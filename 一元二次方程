@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    int a,b,c,x1,x2,y;
+    printf("请输入一元二次方程ax*x+bx+c=0中的a,b,c\n");
+    scanf("%d%d%d",&a,&b,&c);
+    y= b*b-4*a*c;
+    if(y>0)
+    {
+        x1= (-b+sqrt(y)) / (2*a);
+        x2= (-b-sqrt(y)) / (2*a);
+        printf("x有两解:%d,%d",x1,x2);
+    }
+    else if(y==0)
+    {
+         x1= (-b) / (2*a);
+         x2= x1;//右边赋给左边,不是互赋
+         printf("x有唯一解:%d",x1);
+    }
+    else
+    {
+        printf("无解");
+    }
+    return 0;
+}
