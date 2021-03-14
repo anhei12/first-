@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char i='x';//存储字符用char
+    printf("%c\n",i);//字符用%c
+    return 0;
+}
