@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i;
+    printf("输入分数：");
+    scanf("%d",&i);
+    if(i==100)
+        printf("满分");
+    else if(i>=90)
+        printf("优");
+    else if(i>=80)
+        printf("良");
+    else if(i>=60)
+        printf("及格");
+    else if(i<60)
+        printf("垃圾");
+
+    return 0;
+}
