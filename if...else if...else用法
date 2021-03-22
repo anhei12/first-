@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i;
+    printf("输入");
+    scanf("%d",&i);
+    if(i<5)
+        printf("aaaaa");
+    else if(i==5)
+        printf("bbbbb");
+    else if(i==6)
+        printf("ccccc");
+    else if(i==7)
+        printf("ddddd");
+    else if(i>7)
+        printf("eeeee");
+
+    return 0;
+}
