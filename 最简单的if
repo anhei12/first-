@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i =  3;
+    if (i>4)
+        printf("输出");
+
+    return 0;
+}
