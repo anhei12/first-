@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i;
+    int a=2;
+    i=(a++,++a,a-3,a+4);
+    printf("i=%d,a=%d\n",i,a);
+    return 0;
+}
