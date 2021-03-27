@@ -1,0 +1,37 @@
+//斐波拉契序列1 2 3 5 8 13 21....n
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n;
+
+    int a;
+    int  f1;
+    int  f2;
+    int  f3;
+    f1=1;
+    f2=2;
+
+    printf("请输入选择的项：\n");
+    scanf("%d",&n);
+    if(n==1)
+    {
+        printf("%d",f1);
+    }
+    else if(n==2)
+    {
+        printf("%d",f2);
+    }
+    else
+    {
+        for(a=3;a<=n;++a)//n=3   n=4
+        {
+            f3=f2+f1;  //f3=3    f3=5
+            f1=f2;     //f1=2    f1=3
+            f2=f3;     //f2=3    f2=5
+        }
+        printf("%d",f3);
+    }
+    return 0;
+}
