@@ -1,0 +1,30 @@
+//用while判断一个数是否为回文数，是输出yes，否输出no；
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a;
+    int sum=0;
+    int m;
+    printf("请输入：");
+    scanf("%d",&a);
+    m = a;
+    while(m)
+    {
+
+        sum = sum*10+m%10;
+         m = m/10;
+    }
+  
+   if(sum==a)
+   {        
+       printf("yes");
+    }
+     else
+   {
+        printf("no");
+    }
+
+    return 0;
+}
