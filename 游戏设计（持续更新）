@@ -1,0 +1,85 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main (void)
+{
+    int a,b,c,d,e;//玩家操作选项
+    int hp=100;
+    int harm=10;//伤害
+    int skill=25;//技能
+    int hp1=100;//怪物初始血量
+    int hp2;//怪物当前血量
+    int harm1=10;
+    char name;
+//进入游戏
+    printf("勇士请输入你的昵称：\n");
+    scanf("%c",&name);
+    printf("道路左边发现一个村子，进村还是继续直行？（1，进村。2，直行）\n");
+    scanf("%d",&a);
+    if(a==1)
+    {
+        printf("村子一片狼藉\n");
+    }
+    else if(a==2)
+    {
+       printf("无事发生");
+    }
+    else
+    printf("请正确输入!");
+
+    printf("发现：一位老人停在路边。（1，询问。2，攻击）\n");
+    scanf("%d",&b);
+    if(b==1)
+    {
+        printf("%c勇士\n",name);
+    }
+    else if(b==2)
+    {
+       printf("老人被你杀死了\n");
+    }
+    else
+    printf("请正确输入!");
+//战斗部分：
+    printf("前方出现一只史莱姆。1:探查。2：退后\n");
+    scanf("%d",&c);
+    switch(c)
+      {
+        case 1:
+            printf("名称：史莱姆\n血量：%d\n攻击：%d\n",hp1,harm1);
+             hp2=hp1;
+            while(hp2>0)
+        {
+            printf("请选择：1，攻击。2，防御。3，释放技能。4，逃走\n");
+            scanf("%d",&d);
+            switch(d)
+             {
+            case 1:
+                hp2=hp2-harm;
+                printf("史莱姆受到攻击！开始寻找敌人\n史莱姆（%d/100）\n",hp2);
+                break;
+            case 2:
+                printf("防nm呢，a上去啊\n");
+                printf("结束\n");
+                break;
+            case 3:
+                hp2=hp2-skill;
+                printf("史莱姆受到‘斩击’攻击！开始寻找敌人\n史莱姆（%d/100）\n",hp2);
+                break;
+            case 4:
+                printf("逃跑成功\n");
+                printf("结束\n");
+                break;
+             }
+        }
+            break;
+        case 2:
+            printf("退后成功\n");
+            break;
+        default:
+            printf("请正确输入！");
+            break;
+      }
+    printf("战斗结束，%c勇士你胜利了",name);
+    return 0;
+
+}
