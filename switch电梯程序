@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main ()
+{
+    int a;
+    printf("请输入您要到达的楼层");
+    scanf("%d",&a);
+    switch(a)
+    {
+        case 1:
+        printf("到达1层");
+        break;
+        case 2:
+        printf("到达2层");
+        break;
+        case 3:
+        printf("到达3层");
+        break;
+        default:
+        printf("没有这一层");
+        break;
+
+    }
+    return 0;
+}
