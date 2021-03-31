@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+
+int b;
+int c;
+
+int a[3][4]={
+    {1,2,3,4},
+    {5,6,7,8},
+    {9,10,11,12},
+};
+    for(b=0;b<3;++b)
+    {
+        for(c=0;c<4;++c)
+            printf("%d\n",a[b][c]);
+    }
+    return 0;
+
+
+
+
+}
