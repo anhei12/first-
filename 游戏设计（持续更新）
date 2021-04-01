@@ -4,15 +4,21 @@
 int main (void)
 {
 
-
-    int a,b,c,d,e;//玩家操作选项
+//玩家操作选项
+    int a,b,c,d;
+    int dkbb;//打开背包
 
 
 //玩家数据：
     int hp;
     int harm;//伤害
     int skill;//技能
-    int bag[25] = {0};//旅行袋初始化
+    int bag[5][5]= {0};//旅行袋初始化
+    int i,j;//背包的5横5列
+//游戏物品：
+    int MS;//材料Material Science
+    int S;//史莱姆溶液Slime liquid
+
 
 
 
@@ -110,15 +116,39 @@ int main (void)
             printf("请正确输入！");
             break;
       }
-    printf("战斗结束，%c勇士你胜利了",name);
+    system("cls");
+    printf("战斗结束，%c勇士你胜利了\n",name);
 
 
 //战斗结束
     printf("获得：经验*18\n");
     printf("怪物掉落：史莱姆溶液*2\n");
+    bag[0][0] = bag[0][0]+18;
+    system("cls");
 
 
 
+//临时背包物品实验：
+    printf("请选择：1，按打开背包，2，继续前进\n");
+    scanf("%d",&dkbb);
+     if(dkbb==1)
+     {
+         for(i=0;i<5;++i)
+        {
+            for(j=0;j<5;++j)
+                printf("%-10d",bag[i][j]);
+                printf("\n");
+
+        }
+     }
+     else if(dkbb==2)
+     {
+         printf("战利品已存入背包，继续前进");
+     }
+     else
+     {
+         printf("请正确输入！！！");
+     }
 
 
     return 0;
