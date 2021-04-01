@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+void Menu()
+{
+    printf("\n\n");
+    printf("\t\t|-------------------------------------------------------------------|\n");
+    printf("\n\t|                        ATM自动取款系统                            |\n");
+    printf("\t\t|-------------------------------------------------------------------|\n");
+    printf("\n\t|                        1.余额查询                                 |\n");
+    printf("\n\t|                        2.用户取款                                 |\n");
+    printf("\n\t|                        3.修改密码                                 |\n");
+    printf("\n\t|                        4.退出系统                                 |\n");
+    printf("\t\t|-------------------------------------------------------------------|\n");
+}
+void showme()
+{
+    printf("显示客户账户余额:\n");
+}
+void fetchmoney()
+{
+    printf("完成用户取款：\n");
+}
+void changpassword()
+{
+    printf("实现用户修改密码：\n");
+}
+void exitsystem()
+{
+    ;
+}
+int main()
+{
+    struct customer;
+    int cus_number = 0;
+    int choose,flag = 1;
+    while(flag)
+    {
+        Menu();
+        scanf("%d",&choose);
+        system("cls");//清屏
+        switch(choose)
+        {
+            case 1:showme();
+            break;
+            case 2:fetchmoney();
+            break;
+            case 3:changpassword();
+            break;
+            case 4:exitsystem();
+            break;
+            case 0:flag = 0;
+        }
+    }
+    return 0;
+}
