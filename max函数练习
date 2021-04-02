@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <std              `lib.h>
+//max是函数的名字，a，b是形参（形式参数），
+ void max(int a,int b)
+    {
+        if(a>b)
+            printf("%d\n",a);
+        else
+            printf("%d\n",b);
+    }
+
+int main()//所有的程序都是从main函数开始
+{
+    int e=1;
+    int f=2;
+    int c=3;
+    int d=4;
+    max(e,f);
+    max(c,d);
+
+
+
+
+    return 0;
+}
