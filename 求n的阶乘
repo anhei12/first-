@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int funfac(int n)
+{
+    int a;
+    int jc=1;
+    for(a=1;a<=n;++a)
+        jc=jc*a;
+    return jc;
+}
+int main()
+{
+    int jc;
+    int b;
+    printf("输入：");
+    scanf("%d",&b);
+    jc=funfac(b);
+    printf("%d",jc);
+    return 0;
+}
