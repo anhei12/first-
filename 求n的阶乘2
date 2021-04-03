@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int jc(int n)
+{
+    int a;
+    int jc=1;
+    for(a=1;a<=n;++a)
+        jc=jc*a;
+    return jc;
+}
+int main()
+{
+
+    int b;
+    printf("输入：");
+    scanf("%d",&b);
+    printf("%d",jc(b));
+    return 0;
+}
