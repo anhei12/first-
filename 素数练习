@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int ss(int a)
+{
+
+     int b;
+        for(b=2;b<a;++b)
+    {
+        b%a==0;
+        break;
+    }
+    if(b==a)
+        printf("yes");
+    else
+        printf("no");
+}
+int main()
+{
+    int a;
+    int b;
+    printf("请输入一个数：");
+    scanf("%d",&a);
+    ss(a);
+}
