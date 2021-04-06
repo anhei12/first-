@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int ss(int i)
+{
+     int b;
+
+        for(b=2;b<i;++b)
+    {
+        if(i%b==0)
+            break;
+
+    }
+    if(b==i)
+        return 1;
+    else
+        return 0;
+}
+int main()
+{
+    int a;
+    int c=1;
+    printf("请输入一个数：");
+    scanf("%d",&a);
+    while(c<=a)
+    {
+        if(ss(c))
+            printf("%d\n",c);
+        c=c+1;
+    }
+
+//检查部分：
+//    if(ss(a))
+//        printf("yes");
+//    else
+//        printf("no");
+
+    return 0;
+}
