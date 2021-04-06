@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int ss(int i)
+{
+     int b;
+
+        for(b=2;b<i;++b)
+    {
+        if(i%b==0)
+            break;
+
+    }
+    if(b==i)
+        return 1;
+    else
+        return 0;
+}
+int main()
+{
+    int d=0;//素数的个数
+    int a;//输入值
+    int c=1;
+    printf("请输入一个数：");
+    scanf("%d",&a);
+    while(c<=a)
+    {
+        if(ss(c))
+            {
+                printf("%d\n",c);//输出素数
+                d=d+1;
+            }
+        c=c+1;
+
+    }
+    printf("素数个数为：%d",d);//输出素数个数
+
+//检查部分：
+//    if(ss(a))
+//        printf("yes");
+//    else
+//        printf("no");
+
+    return 0;
+}
