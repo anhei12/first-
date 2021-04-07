@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    int a;
+    int b=0;//输出的数
+    printf("请输入一个数：");
+    scanf("%d",&a);
+    while(a)
+    {
+        b = (b*10)+(a%10);
+        a = a/10;
+    }
+    printf("%d",b);
+    return 0;
+}
