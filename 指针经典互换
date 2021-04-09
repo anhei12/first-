@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void jh(int *q,int *p)
+{
+    int i;
+    i=*q;
+    *q=*p;
+    *p=i;
+    return;
+}
+
+int main()
+{
+    int a=1;
+    int b=2;
+    jh(&a,&b);
+    printf("a=%d,b=%d",a,b);
+
+    return 0;
+}
