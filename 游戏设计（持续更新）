@@ -26,7 +26,13 @@ int main (void)
     int hp1=100;//怪物初始血量
     int hp2;//怪物当前血量
     int harm1=10;
-    char name;
+ //   char name;
+    char hanzi[]="暗黑";
+    char name[100];
+    name[0]=hanzi[0];
+    name[1]=hanzi[1];
+    name[2]=hanzi[2];
+    name[3]=hanzi[3];
 
 
 
@@ -39,9 +45,9 @@ int main (void)
 
 
 //进入游戏
-    printf("勇士请输入你的昵称：\n");
-    scanf("%c",&name);
-    system("cls");
+ //   printf("勇士请输入你的昵称：\n");
+//    scanf("%c",&name);
+ //   system("cls");
 
     printf("道路左边发现一个村子，进村还是继续直行？（1，进村。2，直行）\n");
     scanf("%d",&a);
@@ -55,13 +61,14 @@ int main (void)
     }
     else
     printf("请正确输入!");
-    system("cls");
+//    system("cls");
 
     printf("发现：一位老人停在路边。（1，询问。2，攻击）\n");
     scanf("%d",&b);
     if(b==1)
     {
-        printf("%c勇士\n",name);
+        printf("%c%c%c%c",name[0],name[1],name[2],name[3]);
+        printf("勇士\n");
     }
     else if(b==2)
     {
@@ -69,14 +76,14 @@ int main (void)
     }
     else
     printf("请正确输入!");
-    system("cls");
+//    system("cls");
 
 
 
 //战斗部分：
     printf("前方出现一只史莱姆。1:探查。2：退后\n");
     scanf("%d",&c);
-    system("cls");
+//    system("cls");
     switch(c)
       {
         case 1:
@@ -87,7 +94,7 @@ int main (void)
         {
             printf("请选择：1，攻击。2，防御。3，释放技能。4，逃走\n");
             scanf("%d",&d);
-            system("cls");
+ //           system("cls");
             switch(d)
              {
             case 1:
@@ -116,15 +123,15 @@ int main (void)
             printf("请正确输入！");
             break;
       }
-    system("cls");
-    printf("战斗结束，%c勇士你胜利了\n",name);
+
+    printf("战斗结束，%c%c%c%c勇士你胜利了\n",name[0],name[1],name[2],name[3]);
 
 
 //战斗结束
     printf("获得：经验*18\n");
     printf("怪物掉落：史莱姆溶液*2\n");
     bag[0][0] = bag[0][0]+18;
-    system("cls");
+
 
 
 
@@ -149,6 +156,7 @@ int main (void)
      {
          printf("请正确输入！！！");
      }
+     printf("游戏结束");
 
 
     return 0;
