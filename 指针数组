@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int f(int *a,int len)
+{
+    int i;
+    for(i=0;i<len;++i)
+    {
+        printf("%d ",*(a+i));
+    }
+    printf("\n");
+    return ;
+}
+int main ()
+{
+
+    int a[5] = {1,2,3,4,5};
+    int b[10] = {1,3,5,7,9,11,13,15,17,19};
+    int c[100] = {2,4,6,8,10};
+
+    f(a,5);//d是int *类型的
+    f(b,10);
+    f(c,100);
+
+    return 0;
+}
