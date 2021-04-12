@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <malloc.h>
+
+int main (void)
+{
+
+    int len;
+    int *a;
+    int i;
+
+    printf("请输入需要的数组长度：");
+    scanf("%d",&len);
+    a = (int *)malloc(4*len);
+
+    printf("请输入数组内的值：");
+
+    for(i=0;i<len;++i)
+        scanf("%d",&a[i]);
+
+    printf("数组为：");
+
+    for(i=0;i<len;++i)
+        printf("%d\n",a[i]);
+
+
+    return 0;
+}
