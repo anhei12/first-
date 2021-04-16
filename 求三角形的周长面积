@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int L(int a,int b,int c)
+{
+    int l;
+    l = a+b+c;
+    return l;
+}
+
+double S(int a,int b ,int c)
+{
+    double s;
+//    p = 1.0*(a+b+c)/2;
+    s = 1.0*sqrt(((a+b+c)/2)*((a+b+c)/2-a)*((a+b+c)/2-b)*((a+b+c)/2-c));
+    return s;
+}
+
+int main()
+{
+    int a,b,c;
+    printf("请输入三角形三边：");
+    scanf("%d %d %d",&a,&b,&c);
+    printf("三角形周长为：%d\n",L(a,b,c));
+    printf("三角形面积为：%fl\n",S(a,b,c));
+    return 0;
+}
