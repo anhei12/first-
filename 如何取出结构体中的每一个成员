@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct ren
+{
+    double height;
+    int age;
+    char sex;
+};
+int main()
+{
+    //第一种方法：
+    struct ren anhei = {1.7,20,'M'};
+    printf("%f,%d,%c\n",anhei.height,anhei.age,anhei.sex);
+    //第二张方法：（更常用）
+    struct ren anhei2;
+    struct ren *p = &anhei2;
+    p->height = 1.6F;
+    p->age = 19;
+    p->sex = 'W';
+    printf("%f,%d,%c\n",p->height,p->age,p->sex);
+
+    return 0;
+}
